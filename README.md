@@ -182,3 +182,80 @@ Here’s a **week-by-week breakdown** for completing your **real-time collaborat
 3. **Focus on MVP**: Complete the core features first; additional features can be added if time permits.
 
 Let me know if you’d like a more detailed breakdown for any week!
+
+
+
+************************************
+
+nestjs-backend/
+├── src/
+│   ├── auth/               # Authentication module
+│   │   ├── auth.controller.ts
+│   │   ├── auth.service.ts
+│   │   ├── auth.module.ts
+│   │   └── dto/
+│   │       ├── login.dto.ts
+│   │       └── signup.dto.ts
+│   ├── documents/          # Documents module
+│   │   ├── documents.controller.ts
+│   │   ├── documents.service.ts
+│   │   ├── documents.module.ts
+│   │   ├── schemas/
+│   │   │   └── document.schema.ts
+│   │   └── dto/
+│   │       ├── create-document.dto.ts
+│   │       └── update-document.dto.ts
+│   ├── users/              # Users module
+│   │   ├── users.controller.ts
+│   │   ├── users.service.ts
+│   │   ├── users.module.ts
+│   │   ├── schemas/
+│   │   │   └── user.schema.ts
+│   │   └── dto/
+│   │       └── create-user.dto.ts
+│   ├── websockets/         # WebSocket gateway and handlers
+│   │   ├── websockets.gateway.ts
+│   │   └── websockets.module.ts
+│   ├── shared/             # Shared utilities and guards
+│   │   ├── guards/
+│   │   │   └── jwt-auth.guard.ts
+│   │   └── pipes/
+│   │       └── validation.pipe.ts
+│   ├── app.module.ts       # Root module
+│   ├── main.ts             # Main entry point
+├── test/                   # Unit and integration tests
+├── docker-compose.yml      # Docker setup for MongoDB, RabbitMQ, etc.
+├── package.json            # Project dependencies
+├── tsconfig.json           # TypeScript configuration
+└── README.md               # Project documentation
+
+
+
+*******************************************
+
+react-frontend/
+├── public/                 # Static files (favicon, index.html, etc.)
+├── src/
+│   ├── assets/             # Static assets like images, fonts, etc.
+│   ├── components/         # Reusable components
+│   │   ├── Auth/           # Components related to authentication
+│   │   ├── Editor/         # Rich text editor components
+│   │   └── Shared/         # Common UI components (e.g., buttons, modals)
+│   ├── context/            # React context for global state
+│   ├── hooks/              # Custom React hooks
+│   ├── layouts/            # Layout components (e.g., DashboardLayout)
+│   ├── pages/              # Pages for routing (Home, Dashboard, Editor)
+│   │   ├── Home.tsx        # Landing page
+│   │   ├── Login.tsx       # Login page
+│   │   ├── Signup.tsx      # Signup page
+│   │   ├── Dashboard.tsx   # User's dashboard
+│   │   └── Editor.tsx      # Collaborative editor
+│   ├── services/           # API service functions (Axios instances)
+│   ├── styles/             # Global CSS/SCSS files
+│   ├── types/              # TypeScript interfaces and types
+│   ├── utils/              # Utility functions (e.g., date formatting)
+│   ├── App.tsx             # Main app component
+│   ├── index.tsx           # React DOM rendering entry point
+│   └── vite.config.ts      # Vite configuration (or CRA's equivalent)
+├── package.json            # Project dependencies
+└── tsconfig.json           # TypeScript configuration
